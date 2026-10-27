@@ -67,7 +67,7 @@
 ---
 
 ## 👤 Автор
-
+![Аватар](./avatar.jpg)
 **Sergiy Pelikhatyy** — Инженер-программист (Уппсала, Швеция)
 - GitHub: github.com
 - LinkedIn: linkedin.com
