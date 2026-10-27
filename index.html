@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Портфолио | Sergiy Pelikhatyy</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- 1. Хедер и навигационное меню (<nav>) -->
+    <header>
+        <!-- Требование: Заголовок 1-го уровня (H1) -->
+        <h1>Sergiy Pelikhatyy — Инженер-программист</h1>
+        
+        <!-- Требование: Навигационное меню (<nav>) -->
+        <nav aria-label="Главное меню">
+            <ul>
+                <li><a href="#about">Обо мне</a></li>
+                <li><a href="#projects">Проекты</a></li>
+                <li><a href="#skills">Навыки</a></li>
+                <li><a href="#contact">Контакты</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- 2. Основная секция (<main>) -->
+    <main>
+
+        <!-- Секция "Обо мне" -->
+        <section id="about">
+            <!-- Требование: Заголовок 2-го уровня (H2) -->
+            <h2>Обо мне</h2>
+            
+            <!-- Требование: Изображение с обязательными атрибутами alt, width, height -->
+            <img src="avatar.jpg" alt="Фотография Sergiy Pelikhatyy" width="200" height="200">
+            
+            <p>
+                Я инженер-программист с опытом разработки и поддержки ПО на Python и C++, 
+                а также применения веб-технологий HTML5 и CSS3.
+            </p>
+        </section>
+
+        <!-- Секция "Проекты" -->
+        <section id="projects">
+            <h2>Проекты и сертификаты</h2>
+            
+            <!-- Требование: Минимум 3 проекта с заголовками 3-го уровня (H3) -->
+            <article class="project-card">
+                <h3>1. Microsoft Security Essentials Professional Certificate</h3>
+                <p>Программа по кибербезопасности, оценке рисков и защите облачных систем от Microsoft и LinkedIn.</p>
+            </article>
+
+            <article class="project-card">
+                <h3>2. Ethics in the Age of Generative AI</h3>
+                <p>Изучение компьютерной этики, вопросов безопасности и ответственного применения моделей генеративного ИИ.</p>
+            </article>
+
+            <article class="project-card">
+                <h3>3. Вводный курс программирования</h3>
+                <p>Интенсивный практический курс по основам алгоритмизации и программирования в Intensive Code.</p>
+            </article>
+        </section>
+
+        <!-- Секция "Контактная форма" -->
+        <section id="contact">
+            <h2>Связаться со мной</h2>
+            
+            <!-- Требование: Форма обратной связи (все 8 обязательных элементов) -->
+            <form action="#" method="post">
+                
+                <!-- Элемент 1: Имя (text) -->
+                <div>
+                    <label for="user-name">Ваше имя:</label>
+                    <input type="text" id="user-name" name="user_name" required placeholder="Иван Иванов">
+                </div>
+
+                <!-- Элемент 2: E-mail (email) -->
+                <div>
+                    <label for="user-email">E-mail:</label>
+                    <input type="email" id="user-email" name="user_email" required placeholder="example@mail.com">
+                </div>
+
+                <!-- Элемент 3: Веб-сайт (url) -->
+                <div>
+                    <label for="user-website">Ваш сайт / LinkedIn:</label>
+                    <input type="url" id="user-website" name="user_website" placeholder="https://example.com">
+                </div>
+
+                <!-- Элемент 4: Телефон (tel) -->
+                <div>
+                    <label for="user-phone">Номер телефона:</label>
+                    <input type="tel" id="user-phone" name="user_phone" placeholder="+46 70 000 00 00">
+                </div>
+
+                <!-- Элемент 5: Выпадающий список (<select>) -->
+                <div>
+                    <label for="subject">Тема обращения:</label>
+                    <select id="subject" name="subject">
+                        <option value="job">Предложение работы</option>
+                        <option value="freelance">Проект / Фриланс</option>
+                        <option value="question">Общий вопрос</option>
+                    </select>
+                </div>
+
+                <!-- Элемент 6: Флажок (checkbox) -->
+                <div>
+                    <input type="checkbox" id="consent" name="consent" required>
+                    <label for="consent">Согласен на обработку персональных данных</label>
+                </div>
+
+                <!-- Элемент 7: Многострочный текст (<textarea>) -->
+                <div>
+                    <label for="message">Сообщение:</label>
+                    <textarea id="message" name="user_message" rows="5" placeholder="Напишите ваше сообщение..."></textarea>
+                </div>
+
+                <!-- Элемент 8: Кнопка отправки (submit) -->
+                <div>
+                    <button type="submit">Отправить сообщение</button>
+                </div>
+
+            </form>
+        </section>
+
+    </main>
+
+    <!-- 3. Боковая панель (<aside>) -->
+    <aside id="skills">
+        <h2>Ключевые навыки</h2>
+        <ul>
+            <li><strong>Языки:</strong> Python, C++</li>
+            <li><strong>Веб:</strong> HTML5, CSS3</li>
+            <li><strong>Базы данных:</strong> PostgreSQL, MySQL</li>
+        </ul>
+        <p><strong>Локация:</strong> Уппсала, Швеция</p>
+    </aside>
+
+    <!-- 4. Подвал (<footer>) -->
+    <footer>
+        <p>&copy; 2026 Sergiy Pelikhatyy. Все права защищены.</p>
+        <!-- Требование: Внешняя ссылка -->
+        <p>
+            Профиль разработчика: 
+            <a href="#" target="_blank" rel="noopener noreferrer">GitHub</a> | 
+            <a href="#" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        </p>
+    </footer>
+
+</body>
+</html>

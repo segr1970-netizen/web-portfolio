@@ -1,0 +1,267 @@
+/* ==========================================================================
+   1. Сброс стилей и Переменные (CSS Variables)
+   ========================================================================== */
+:root {
+    --primary-color: #0d6efd;
+    --primary-hover: #0b5ed7;
+    --bg-color: #f8f9fa;
+    --card-bg: #ffffff;
+    --text-color: #212529;
+    --text-muted: #6c757d;
+    --border-color: #dee2e6;
+    --focus-ring: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+    --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    --max-width: 1100px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-family);
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+    padding: 1rem;
+}
+
+/* ==========================================================================
+   2. Шапка и Навигация (<header>, <nav>)
+   ========================================================================== */
+header {
+    background-color: var(--card-bg);
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--text-color);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+}
+
+nav a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 600;
+    padding: 0.5rem 0.75rem;
+    border-radius: 4px;
+    transition: background-color 0.2s ease;
+}
+
+nav a:hover,
+nav a:focus {
+    background-color: rgba(13, 110, 253, 0.1);
+    outline: none;
+}
+
+/* ==========================================================================
+   3. Основное содержимое (<main>, <section>)
+   ========================================================================== */
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+section, aside {
+    background-color: var(--card-bg);
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+h2 {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid var(--border-color);
+    padding-bottom: 0.5rem;
+}
+
+h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Секция "Обо мне" */
+#about img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    border-radius: 50%;
+    margin: 0 auto 1rem auto;
+    border: 3px solid var(--primary-color);
+}
+
+/* Секция "Проекты" */
+#projects {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.project-card {
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    padding: 1rem;
+    background-color: #fafafa;
+}
+
+/* ==========================================================================
+   4. Форма обратной связи (<form>)
+   ========================================================================== */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+form div {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+}
+
+label {
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="tel"],
+select,
+textarea {
+    width: 100%;
+    padding: 0.65rem;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    font-size: 1rem;
+    font-family: inherit;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: var(--focus-ring);
+}
+
+/* Стилизация чекбокса */
+form div:has(input[type="checkbox"]) {
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+input[type="checkbox"] {
+    width: 1.2rem;
+    height: 1.2rem;
+    cursor: pointer;
+}
+
+button[type="submit"] {
+    background-color: var(--primary-color);
+    color: #ffffff;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+button[type="submit"]:hover,
+button[type="submit"]:focus {
+    background-color: var(--primary-hover);
+    outline: none;
+    box-shadow: var(--focus-ring);
+}
+
+/* ==========================================================================
+   5. Боковая панель и Подвал (<aside>, <footer>)
+   ========================================================================== */
+aside ul {
+    list-style-position: inside;
+    margin-bottom: 1rem;
+}
+
+footer {
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: 1.5rem;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+
+footer a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+/* ==========================================================================
+   6. Адаптивность (Responsive Media Queries)
+   ========================================================================== */
+
+/* Планшеты (от 768px) */
+@media (min-width: 768px) {
+    header h1 {
+        font-size: 1.8rem;
+    }
+
+    #projects {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+    
+    #projects h2 {
+        grid-column: 1 / -1;
+    }
+
+    #about {
+        display: flex;
+        align-items: center;
+        gap: 1.5rem;
+    }
+
+    #about img {
+        margin: 0;
+    }
+}
+
+/* Десктопы (от 1024px) */
+@media (min-width: 1024px) {
+    body {
+        max-width: var(--max-width);
+        margin: 0 auto;
+    }
+
+    /* Раскладка в две колонки: Основной контент + Боковая панель */
+    .page-layout {
+        display: grid;
+        grid-template-columns: 2.5fr 1fr;
+        gap: 1.5rem;
+    }
+
+    #projects {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
