@@ -1,205 +1,200 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="sv">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Портфолио | Sergiy Pelikhatyy</title>
+    <title data-i18n="doc_title">Portfolio | Sergiy Pelikhatyy</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- 1. Хедер и навигационное меню (<nav>) -->
+    <!-- Header & Navigation -->
     <header>
-        <!-- Требование: Заголовок 1-го уровня (H1) -->
-        <h1>Sergiy Pelikhatyy — Инженер-программист</h1>
+        <div class="header-container">
+            <h1 data-i18n="header_title">Sergiy Pelikhatyy — Mjukvaruingenjör</h1>
+            
+            <!-- Переключатель языков (3 языка: SV, EN, RU) -->
+            <div class="lang-switcher" aria-label="Select language">
+                <button type="button" data-lang="sv" class="lang-btn active" title="Svenska">SV</button>
+                <button type="button" data-lang="en" class="lang-btn" title="English">EN</button>
+                <button type="button" data-lang="ru" class="lang-btn" title="Русский">RU</button>
+            </div>
+        </div>
         
-        <!-- Требование: Навигационное меню (<nav>) -->
-        <nav aria-label="Главное меню">
+        <nav aria-label="Huvudmeny">
             <ul>
-                <li><a href="#about">Обо мне</a></li>
-                <li><a href="#experience">Опыт работы</a></li>
-                <li><a href="#education">Образование</a></li>
-                <li><a href="#projects">Проекты</a></li>
-                <li><a href="#skills">Навыки</a></li>
-                <li><a href="#contact">Контакты</a></li>
+                <li><a href="#about" data-i18n="nav_about">Om mig</a></li>
+                <li><a href="#education" data-i18n="nav_education">Utbildning</a></li>
+                <li><a href="#experience" data-i18n="nav_experience">Erfarenhet</a></li>
+                <li><a href="#projects" data-i18n="nav_projects">Projekt</a></li>
+                <li><a href="#skills" data-i18n="nav_skills">Färdigheter</a></li>
+                <li><a href="#contact" data-i18n="nav_contact">Kontakt</a></li>
             </ul>
         </nav>
     </header>
 
-    <!-- 2. Основная секция (<main>) -->
-    <main>
+    <!-- Main Section -->
+    <main class="page-layout">
 
-        <!-- Секция "Обо мне" -->
-        <section id="about">
-            <!-- Требование: Заголовок 2-го уровня (H2) -->
-            <h2>Обо мне</h2>
-            
-            <!-- Требование: Изображение с обязательными атрибутами alt, width, height -->
-            <img src="avatar.jpg" alt="Фотография Sergiy Pelikhatyy" width="200" height="200">
-            
-            <p>
-                Я инженер-программист с многолетним опытом разработки и поддержки программных решений на Python и C++, 
-                а также применения веб-технологий HTML5 и CSS3. Опыт включает разработку корпоративного ПО, администрирование систем 
-                и автоматизацию процессов.
-            </p>
-        </section>
+        <div class="main-content">
+            <!-- Section: Om mig -->
+            <section id="about">
+                <h2 data-i18n="about_title">Om mig</h2>
+                <div class="about-flex">
+                    <img src="avatar.jpg" alt="Foto på Sergiy Pelikhatyy" width="200" height="200" loading="lazy">
+                    <p data-i18n="about_desc">
+                        Jag är en erfaren mjukvaruingenjör med mångårig bakgrund inom utveckling och support av applikationer i Python och C++, samt modern webbutveckling (HTML5, CSS3).
+                    </p>
+                </div>
+            </section>
 
-        <!-- Секция "Опыт работы" -->
-        <section id="experience">
-            <h2>Опыт работы</h2>
-
-            <article class="experience-card">
-                <h3>Инженер-программист</h3>
-                <p><strong>Период:</strong> 2004 — 2022 | Донецк, Украина</p>
-                <ul>
-                    <li>Разработка и поддержка корпоративных веб- и десктоп-приложений на Python и C++.</li>
-                    <li>Поддержка существующего ПО, оптимизация кода и разработка новых модулей для внутренних систем.</li>
-                    <li>Создание инструментов автоматизации для тестирования и развертывания, участие в ревью кода и планировании спринтов.</li>
-                    <li>Настройка и конфигурирование бухгалтерских программ 1С.</li>
-                </ul>
-            </article>
-
-            <article class="experience-card">
-                <h3>Инженер-программист / Системный администратор</h3>
-                <p><strong>Период:</strong> 1998 — 2004 | Донецк, Украина</p>
-                <ul>
-                    <li>Сборка и обслуживание ПК, системное администрирование локальных сетей.</li>
-                    <li>Техническая поддержка пользователей, исправление ошибок и обновление ПО.</li>
-                </ul>
-            </article>
-
-            <article class="experience-card">
-                <h3>Автомеханик / Техник</h3>
-                <p><strong>Период:</strong> 1989 — 1998 | Донецк, Украина (в т.ч. СТО «Skoda»)</p>
-                <ul>
-                    <li>Техническое обслуживание и ремонт автомобилей, диагностика и консультация клиентов.</li>
-                </ul>
-            </article>
-        </section>
-
-        <!-- Секция "Образование" -->
-        <section id="education">
-            <h2>Образование</h2>
-            
-            <article class="education-card">
-                <h3>Харьковский национальный университет радиоэлектроники</h3>
-                <p><strong>Квалификация:</strong> Инженер-программист (Специалист)</p>
-                <p><strong>Специальность:</strong> Программное обеспечение автоматизированных систем</p>
-                <p><strong>Период обучения:</strong> 2003 — 2004</p>
-            </article>
-
-            <article class="education-card">
-                <h3>Горловский автотранспортный техникум</h3>
-                <p><strong>Квалификация:</strong> Техник-механик</p>
-                <p><strong>Период обучения:</strong> 1985 — 1989</p>
-            </article>
-        </section>
-
-        <!-- Секция "Проекты" -->
-        <section id="projects">
-            <h2>Проекты и сертификаты</h2>
-            
-            <!-- Требование: Минимум 3 проекта с заголовками 3-го уровня (H3) -->
-            <article class="project-card">
-                <h3>1. Microsoft Security Essentials Professional Certificate</h3>
-                <p>Программа по кибербезопасности, оценке рисков и защите облачных систем от Microsoft и LinkedIn.</p>
-            </article>
-
-            <article class="project-card">
-                <h3>2. Ethics in the Age of Generative AI</h3>
-                <p>Изучение компьютерной этики, вопросов безопасности и ответственного применения моделей генеративного ИИ.</p>
-            </article>
-
-            <article class="project-card">
-                <h3>3. Вводный курс программирования</h3>
-                <p>Интенсивный практический курс по основам алгоритмизации и программирования в Intensive Code.</p>
-            </article>
-        </section>
-
-        <!-- Секция "Контактная форма" -->
-        <section id="contact">
-            <h2>Связаться со мной</h2>
-            
-            <!-- Требование: Форма обратной связи (все 8 обязательных элементов) -->
-            <form action="#" method="post">
+            <!-- Section: Utbildning -->
+            <section id="education">
+                <h2 data-i18n="edu_title">Utbildning</h2>
                 
-                <!-- Элемент 1: Имя (text) -->
-                <div>
-                    <label for="user-name">Ваше имя:</label>
-                    <input type="text" id="user-name" name="user_name" required placeholder="Иван Иванов">
-                </div>
+                <article class="card">
+                    <h3 data-i18n="edu1_school">Kharkiv National University of Radioelectronics</h3>
+                    <p><strong data-i18n="label_degree">Examen:</strong> <span data-i18n="edu1_degree">Mjukvaruingenjör (Civilingenjör / Magister)</span></p>
+                    <p><strong data-i18n="label_specialty">Inriktning:</strong> <span data-i18n="edu1_spec">Programvara för automatiserade system</span></p>
+                    <p><strong data-i18n="label_period">Period:</strong> 2003 — 2004</p>
+                </article>
 
-                <!-- Элемент 2: E-mail (email) -->
-                <div>
-                    <label for="user-email">E-mail:</label>
-                    <input type="email" id="user-email" name="user_email" required placeholder="example@mail.com">
-                </div>
+                <article class="card">
+                    <h3 data-i18n="edu2_school">Gorlovka Auto Transport Technical College</h3>
+                    <p><strong data-i18n="label_degree">Examen:</strong> <span data-i18n="edu2_degree">Fordonstekniker / Mekaniker</span></p>
+                    <p><strong data-i18n="label_period">Period:</strong> 1985 — 1989</p>
+                </article>
+            </section>
 
-                <!-- Элемент 3: Веб-сайт (url) -->
-                <div>
-                    <label for="user-website">Ваш сайт / LinkedIn:</label>
-                    <input type="url" id="user-website" name="user_website" placeholder="https://example.com">
-                </div>
+            <!-- Section: Erfarenhet -->
+            <section id="experience">
+                <h2 data-i18n="exp_title">Arbetslivserfarenhet</h2>
 
-                <!-- Элемент 4: Телефон (tel) -->
-                <div>
-                    <label for="user-phone">Номер телефона:</label>
-                    <input type="tel" id="user-phone" name="user_phone" placeholder="+46 70 000 00 00">
-                </div>
+                <article class="card">
+                    <h3 data-i18n="exp1_role">Mjukvaruingenjör</h3>
+                    <p class="meta"><strong>Donetsk, Ukraina</strong> | 2004 — 2022</p>
+                    <ul>
+                        <li data-i18n="exp1_bullet1">Utveckling och underhåll av webb- och skrivbordsapplikationer i Python och C++.</li>
+                        <li data-i18n="exp1_bullet2">Felsökning, felrättning och modulutveckling för interna affärssystem.</li>
+                        <li data-i18n="exp1_bullet3">Automatisering av tester, kodgranskning och sprintplanering.</li>
+                    </ul>
+                </article>
 
-                <!-- Элемент 5: Выпадающий список (<select>) -->
-                <div>
-                    <label for="subject">Тема обращения:</label>
-                    <select id="subject" name="subject">
-                        <option value="job">Предложение работы</option>
-                        <option value="freelance">Проект / Фриланс</option>
-                        <option value="question">Общий вопрос</option>
-                    </select>
-                </div>
+                <article class="card">
+                    <h3 data-i18n="exp2_role">Mjukvaruingenjör / Systemadministratör</h3>
+                    <p class="meta"><strong>Donetsk, Ukraina</strong> | 1998 — 2004</p>
+                    <ul>
+                        <li data-i18n="exp2_bullet1">Montering, underhåll av datorer och administration av lokala nätverk (LAN).</li>
+                        <li data-i18n="exp2_bullet2">Teknisk support och användarstöd.</li>
+                    </ul>
+                </article>
 
-                <!-- Элемент 6: Флажок (checkbox) -->
-                <div>
-                    <input type="checkbox" id="consent" name="consent" required>
-                    <label for="consent">Согласен на обработку персональных данных</label>
-                </div>
+                <article class="card">
+                    <h3 data-i18n="exp3_role">Fordonstekniker / Mekaniker</h3>
+                    <p class="meta"><strong>Donetsk, Ukraina (Skoda Service)</strong> | 1989 — 1998</p>
+                    <ul>
+                        <li data-i18n="exp3_bullet1">Reparation, tekniskt underhåll och felsökning av bilar.</li>
+                    </ul>
+                </article>
+            </section>
 
-                <!-- Элемент 7: Многострочный текст (<textarea>) -->
-                <div>
-                    <label for="message">Сообщение:</label>
-                    <textarea id="message" name="user_message" rows="5" placeholder="Напишите ваше сообщение..."></textarea>
-                </div>
+            <!-- Section: Projekt & Certifikat -->
+            <section id="projects">
+                <h2 data-i18n="proj_title">Projekt & Certifikat</h2>
+                <!-- ДОБАВЛЕНА ОБЕРТКА ДЛЯ СЕТКИ -->
+                <div class="projects-grid">
+                    <article class="card">
+                        <h3>1. Microsoft Security Essentials</h3>
+                        <p data-i18n="proj1_desc">Professionellt certifikat från Microsoft & LinkedIn inom cybersäkerhet och molnsäkerhet.</p>
+                    </article>
 
-                <!-- Элемент 8: Кнопка отправки (submit) -->
-                <div>
-                    <button type="submit">Отправить сообщение</button>
-                </div>
+                    <article class="card">
+                        <h3>2. Ethics in Generative AI</h3>
+                        <p data-i18n="proj2_desc">LinkedIn Learning-certifikat om datoretik och ansvarig användning av generativ AI.</p>
+                    </article>
 
-            </form>
-        </section>
+                    <article class="card">
+                        <h3 data-i18n="proj3_title">3. Introduktionskurs till programmering</h3>
+                        <p data-i18n="proj3_desc">Intensivkurs i grundläggande programmering och algoritmer hos Intensive Code.</p>
+                    </article>
+                </div>
+            </section>
+
+            <!-- Section: Kontakt -->
+            <section id="contact">
+                <h2 data-i18n="contact_title">Kontakta mig</h2>
+                
+                <form action="#" method="post">
+                    <div>
+                        <label for="user-name" data-i18n="form_name">Ditt namn:</label>
+                        <input type="text" id="user-name" name="user_name" required placeholder="Anna Andersson">
+                    </div>
+
+                    <div>
+                        <label for="user-email" data-i18n="form_email">E-postadress:</label>
+                        <input type="email" id="user-email" name="user_email" required placeholder="anna@example.com">
+                    </div>
+
+                    <div>
+                        <label for="user-website" data-i18n="form_website">Webbplats / LinkedIn:</label>
+                        <input type="url" id="user-website" name="user_website" placeholder="https://example.com">
+                    </div>
+
+                    <div>
+                        <label for="user-phone" data-i18n="form_phone">Telefonnummer:</label>
+                        <input type="tel" id="user-phone" name="user_phone" placeholder="+46 70 000 00 00">
+                    </div>
+
+                    <div>
+                        <label for="subject" data-i18n="form_subject">Ämne:</label>
+                        <select id="subject" name="subject">
+                            <option value="job" data-i18n="opt_job">Jobberbjudande</option>
+                            <option value="freelance" data-i18n="opt_freelance">Frilans / Projekt</option>
+                            <option value="question" data-i18n="opt_question">Allmän fråga</option>
+                        </select>
+                    </div>
+
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="consent" name="consent" required>
+                        <label for="consent" data-i18n="form_consent">Jag godkänner behandling av personuppgifter</label>
+                    </div>
+
+                    <div>
+                        <label for="message" data-i18n="form_message">Meddelande:</label>
+                        <textarea id="message" name="user_message" rows="5" placeholder="Skriv ditt meddelande här..."></textarea>
+                    </div>
+
+                    <div>
+                        <button type="submit" data-i18n="form_submit">Skicka meddelande</button>
+                    </div>
+                </form>
+            </section>
+        </div>
+
+        <!-- Sidebar -->
+        <aside id="skills">
+            <h2 data-i18n="skills_title">Färdigheter</h2>
+            <ul>
+                <li><strong data-i18n="sk_prog">Programmering:</strong> Python, C++</li>
+                <li><strong data-i18n="sk_web">Webb:</strong> HTML5, CSS3, JavaScript</li>
+                <li><strong data-i18n="sk_db">Databaser:</strong> PostgreSQL, MySQL</li>
+            </ul>
+            <p><strong data-i18n="sk_loc">Plats:</strong> Uppsala, Sverige</p>
+        </aside>
 
     </main>
 
-    <!-- 3. Боковая панель (<aside>) -->
-    <aside id="skills">
-        <h2>Ключевые навыки</h2>
-        <ul>
-            <li><strong>Языки:</strong> Python, C++</li>
-            <li><strong>Веб:</strong> HTML5, CSS3</li>
-            <li><strong>Базы данных:</strong> PostgreSQL, MySQL</li>
-        </ul>
-        <p><strong>Локация:</strong> Уппсала, Швеция</p>
-    </aside>
-
-    <!-- 4. Подвал (<footer>) -->
+    <!-- Footer -->
     <footer>
-        <p>&copy; 2026 Sergiy Pelikhatyy. Все права защищены.</p>
-        <!-- Требование: Внешняя ссылка -->
+        <p>&copy; 2026 Sergiy Pelikhatyy. Alla rättigheter förbehålls / All rights reserved.</p>
         <p>
-            Профиль разработчика: 
+            <span data-i18n="footer_links">Profiler:</span> 
             <a href="#" target="_blank" rel="noopener noreferrer">GitHub</a> | 
             <a href="#" target="_blank" rel="noopener noreferrer">LinkedIn</a>
         </p>
     </footer>
 
+    <!-- JavaScript i18n switcher -->
+    <script src="script.js"></script>
 </body>
 </html>
