@@ -7,7 +7,7 @@
 ## 🚀 Демонстрация (GitHub Pages)
 
 Сайт опубликован и доступен по адресу:  
-👉 **[Ссылка на GitHub Pages](#)** *(вставьте вашу ссылку на GitHub Pages)*
+👉 **[[Ссылка на GitHub Pages](https://segr1970-netizen.github.io/web-portfolio/)](#)** *(вставьте вашу ссылку на GitHub Pages)*
 
 ---
 
