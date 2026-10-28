@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n="doc_title">Portfolio | Sergiy Pelikhatyy</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header & Navigation -->
+    <header>
+        <div class="header-container">
+            <h1 data-i18n="header_title">Sergiy Pelikhatyy — Mjukvaruingenjör</h1>
+            
+            <!-- Переключатель языков (3 языка: SV, EN, RU) -->
+            <div class="lang-switcher" aria-label="Select language">
+                <button type="button" data-lang="sv" class="lang-btn active" title="Svenska">SV</button>
+                <button type="button" data-lang="en" class="lang-btn" title="English">EN</button>
+                <button type="button" data-lang="ru" class="lang-btn" title="Русский">RU</button>
+            </div>
+        </div>
+        
+        <nav aria-label="Huvudmeny">
+            <ul>
+                <li><a href="#about" data-i18n="nav_about">Om mig</a></li>
+                <li><a href="#education" data-i18n="nav_education">Utbildning</a></li>
+                <li><a href="#experience" data-i18n="nav_experience">Erfarenhet</a></li>
+                <li><a href="#projects" data-i18n="nav_projects">Projekt</a></li>
+                <li><a href="#skills" data-i18n="nav_skills">Färdigheter</a></li>
+                <li><a href="#contact" data-i18n="nav_contact">Kontakt</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Section -->
+    <main class="page-layout">
+
+        <div class="main-content">
+            <!-- Section: Om mig -->
+            <section id="about">
+                <h2 data-i18n="about_title">Om mig</h2>
+                <div class="about-flex">
+                    <img src="avatar.jpg" alt="Foto på Sergiy Pelikhatyy" width="200" height="200" loading="lazy">
+                    <p data-i18n="about_desc">
+                        Jag är en erfaren mjukvaruingenjör med mångårig bakgrund inom utveckling och support av applikationer i Python och C++, samt modern webbutveckling (HTML5, CSS3).
+                    </p>
+                </div>
+            </section>
+
+            <!-- Section: Utbildning -->
+            <section id="education">
+                <h2 data-i18n="edu_title">Utbildning</h2>
+                
+                <article class="card">
+                    <h3 data-i18n="edu1_school">Kharkiv National University of Radioelectronics</h3>
+                    <p><strong data-i18n="label_degree">Examen:</strong> <span data-i18n="edu1_degree">Mjukvaruingenjör (Civilingenjör / Magister)</span></p>
+                    <p><strong data-i18n="label_specialty">Inriktning:</strong> <span data-i18n="edu1_spec">Programvara för automatiserade system</span></p>
+                    <p><strong data-i18n="label_period">Period:</strong> 2003 — 2004</p>
+                </article>
+
+                <article class="card">
+                    <h3 data-i18n="edu2_school">Gorlovka Auto Transport Technical College</h3>
+                    <p><strong data-i18n="label_degree">Examen:</strong> <span data-i18n="edu2_degree">Fordonstekniker / Mekaniker</span></p>
+                    <p><strong data-i18n="label_period">Period:</strong> 1985 — 1989</p>
+                </article>
+            </section>
+
+            <!-- Section: Erfarenhet -->
+            <section id="experience">
+                <h2 data-i18n="exp_title">Arbetslivserfarenhet</h2>
+
+                <article class="card">
+                    <h3 data-i18n="exp1_role">Mjukvaruingenjör</h3>
+                    <p class="meta"><strong>Donetsk, Ukraina</strong> | 2004 — 2022</p>
+                    <ul>
+                        <li data-i18n="exp1_bullet1">Utveckling och underhåll av webb- och skrivbordsapplikationer i Python och C++.</li>
+                        <li data-i18n="exp1_bullet2">Felsökning, felrättning och modulutveckling för interna affärssystem.</li>
+                        <li data-i18n="exp1_bullet3">Automatisering av tester, kodgranskning och sprintplanering.</li>
+                    </ul>
+                </article>
+
+                <article class="card">
+                    <h3 data-i18n="exp2_role">Mjukvaruingenjör / Systemadministratör</h3>
+                    <p class="meta"><strong>Donetsk, Ukraina</strong> | 1998 — 2004</p>
+                    <ul>
+                        <li data-i18n="exp2_bullet1">Montering, underhåll av datorer och administration av lokala nätverk (LAN).</li>
+                        <li data-i18n="exp2_bullet2">Teknisk support och användarstöd.</li>
+                    </ul>
+                </article>
+
+                <article class="card">
+                    <h3 data-i18n="exp3_role">Fordonstekniker / Mekaniker</h3>
+                    <p class="meta"><strong>Donetsk, Ukraina (Skoda Service)</strong> | 1989 — 1998</p>
+                    <ul>
+                        <li data-i18n="exp3_bullet1">Reparation, tekniskt underhåll och felsökning av bilar.</li>
+                    </ul>
+                </article>
+            </section>
+
+            <!-- Section: Projekt & Certifikat -->
+            <section id="projects">
+                <h2 data-i18n="proj_title">Projekt & Certifikat</h2>
+                <!-- ДОБАВЛЕНА ОБЕРТКА ДЛЯ СЕТКИ -->
+                <div class="projects-grid">
+                    <article class="card">
+                        <h3>1. Microsoft Security Essentials</h3>
+                        <p data-i18n="proj1_desc">Professionellt certifikat från Microsoft & LinkedIn inom cybersäkerhet och molnsäkerhet.</p>
+                    </article>
+
+                    <article class="card">
+                        <h3>2. Ethics in Generative AI</h3>
+                        <p data-i18n="proj2_desc">LinkedIn Learning-certifikat om datoretik och ansvarig användning av generativ AI.</p>
+                    </article>
+
+                    <article class="card">
+                        <h3 data-i18n="proj3_title">3. Introduktionskurs till programmering</h3>
+                        <p data-i18n="proj3_desc">Intensivkurs i grundläggande programmering och algoritmer hos Intensive Code.</p>
+                    </article>
+                </div>
+            </section>
+
+            <!-- Section: Kontakt -->
+            <section id="contact">
+                <h2 data-i18n="contact_title">Kontakta mig</h2>
+                
+                <form action="#" method="post">
+                    <div>
+                        <label for="user-name" data-i18n="form_name">Ditt namn:</label>
+                        <input type="text" id="user-name" name="user_name" required placeholder="Anna Andersson">
+                    </div>
+
+                    <div>
+                        <label for="user-email" data-i18n="form_email">E-postadress:</label>
+                        <input type="email" id="user-email" name="user_email" required placeholder="anna@example.com">
+                    </div>
+
+                    <div>
+                        <label for="user-website" data-i18n="form_website">Webbplats / LinkedIn:</label>
+                        <input type="url" id="user-website" name="user_website" placeholder="https://example.com">
+                    </div>
+
+                    <div>
+                        <label for="user-phone" data-i18n="form_phone">Telefonnummer:</label>
+                        <input type="tel" id="user-phone" name="user_phone" placeholder="+46 70 000 00 00">
+                    </div>
+
+                    <div>
+                        <label for="subject" data-i18n="form_subject">Ämne:</label>
+                        <select id="subject" name="subject">
+                            <option value="job" data-i18n="opt_job">Jobberbjudande</option>
+                            <option value="freelance" data-i18n="opt_freelance">Frilans / Projekt</option>
+                            <option value="question" data-i18n="opt_question">Allmän fråga</option>
+                        </select>
+                    </div>
+
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="consent" name="consent" required>
+                        <label for="consent" data-i18n="form_consent">Jag godkänner behandling av personuppgifter</label>
+                    </div>
+
+                    <div>
+                        <label for="message" data-i18n="form_message">Meddelande:</label>
+                        <textarea id="message" name="user_message" rows="5" placeholder="Skriv ditt meddelande här..."></textarea>
+                    </div>
+
+                    <div>
+                        <button type="submit" data-i18n="form_submit">Skicka meddelande</button>
+                    </div>
+                </form>
+            </section>
+        </div>
+
+        <!-- Sidebar -->
+        <aside id="skills">
+            <h2 data-i18n="skills_title">Färdigheter</h2>
+            <ul>
+                <li><strong data-i18n="sk_prog">Programmering:</strong> Python, C++</li>
+                <li><strong data-i18n="sk_web">Webb:</strong> HTML5, CSS3, JavaScript</li>
+                <li><strong data-i18n="sk_db">Databaser:</strong> PostgreSQL, MySQL</li>
+            </ul>
+            <p><strong data-i18n="sk_loc">Plats:</strong> Uppsala, Sverige</p>
+        </aside>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Sergiy Pelikhatyy. Alla rättigheter förbehålls / All rights reserved.</p>
+        <p>
+            <span data-i18n="footer_links">Profiler:</span> 
+            <a href="#" target="_blank" rel="noopener noreferrer">GitHub</a> | 
+            <a href="#" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        </p>
+    </footer>
+
+    <!-- JavaScript i18n switcher -->
+    <script src="script.js"></script>
+</body>
+</html>
