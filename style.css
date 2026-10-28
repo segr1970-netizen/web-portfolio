@@ -221,13 +221,13 @@ footer {
     text-align: center;
     padding: 1.5rem;
     margin-top: 1.5rem;
-    color: var(--text-muted);
+    color: #222222; /* Темно-серый вместо переменной — дает контраст выше 10:1 */
     font-size: 0.9rem;
 }
 
 footer a {
-    color: var(--primary-color);
-    text-decoration: none;
+    color: #0044cc; /* Насыщенный синий — дает контраст выше 5:1 */
+    text-decoration: underline; /* Подчеркивание улучшает доступность (a11y) */
 }
 
 /* ==========================================================================
