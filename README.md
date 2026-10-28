@@ -6,8 +6,13 @@
 
 ## 🚀 Демонстрация (GitHub Pages)
 
-Сайт опубликован и доступен по адресу:  
-👉 **[[Ссылка на GitHub Pages](https://segr1970-netizen.github.io/web-portfolio/)]
+Сайт опубликован и доступен в двух версиях:
+
+* **Базовая версия (одноязычная)**:  
+  👉 **[Открыть базовое портфолио](https://segr1970-netizen.github.io/web-portfolio/)**
+
+* **Мультиязычная версия (SV / EN / RU)**:  
+  👉 **[Открыть мультиязычное портфолио (i18n)](https://segr1970-netizen.github.io/web-portfolio/i18n/)**
 
 ---
 
@@ -25,15 +30,20 @@
 
 ```text
 .
-├── index.html          # Главная страница портфолио
+├── index.html          # Главная страница (базовая версия)
 ├── style.css           # Таблица стилей
 ├── avatar.jpg          # Фотография профиля
 ├── README.md           # Документация проекта
-└── screenshots/        # Скриншоты эскизов и результатов тестирования
-    ├── wireframe.png
-    ├── w3c-validator.png
-    ├── lighthouse.png
-    └── firefox-a11y.png
+├── i18n/               # Папка мультиязычной версии
+│   ├── index.html      # Страница с поддержкой 3 языков
+│   ├── style.css       # Стили для переключателя языков
+│   ├── script.js       # Логика переключения языков
+│   └── avatar.jpg      # Фотография профиля
+└── screenshots/        # Папка с 4 обязательными скриншотами
+    ├── wireframe.png       # 1. Эскиз макета (моб / ПК)
+    ├── w3c-validator.png   # 2. Результат проверки W3C HTML Validator
+    ├── lighthouse.png      # 3. Отчет Google Chrome Lighthouse
+    └── firefox-a11y.png    # 4. Проверка доступности в Firefox Accessibility
 ```
 
 ---
